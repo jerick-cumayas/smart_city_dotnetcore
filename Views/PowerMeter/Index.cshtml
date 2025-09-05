@@ -1,0 +1,24 @@
+@model IEnumerable<smart_city_dotnetcore.Models.PowerMeter>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>EntityId</th>
+            <th>Type</th>
+            <th>Phase</th>
+            <th>Version</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var house in Model){
+            <tr>
+                <td>@house.Name</td>
+                <td>@house.EntityId</td>
+                <td>@house.Type</td>
+                <td>@house.Phase</td>
+                <td>@house.Version</td>
+            </tr>
+        }
+    </tbody>
+</table>
