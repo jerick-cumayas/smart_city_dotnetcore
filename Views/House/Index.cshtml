@@ -1,0 +1,24 @@
+@using Microsoft.CodeAnalysis.CSharp
+@model IEnumerable<smart_city_dotnetcore.Models.House>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Address</th>
+            <th>House No</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var house in Model)
+        {
+            <tr>
+                <td>@house.Name</td>
+                <td>@house.Description</td>
+                <td>@house.Address</td>
+                <td>@house.HouseNo</td>
+            </tr>
+        }
+    </tbody>
+</table>
